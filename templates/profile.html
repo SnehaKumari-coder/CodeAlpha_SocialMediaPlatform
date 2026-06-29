@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ user_profile.username }} Profile - VibeConnect</title>
+
+    <!-- Django static -->
+     {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+
+<header>
+    <h1>💜 VibeConnect</h1>
+
+    <nav>
+        <a href="/home/">🏠 Home</a>
+        <a href="/logout/">🚪 Logout</a>
+    </nav>
+</header>
+
+<div class="profile-container">
+
+    <div class="profile-card">
+
+        <div class="avatar">
+            👑
+        </div>
+
+        <!-- Django user object -->
+        <h2>{{ user_profile.username }}</h2>
+
+        <p class="bio">
+            ✨ Dream Big | Code Hard | Stay Unique ✨
+        </p>
+
+        <div class="stats">
+
+            <div>
+                <h3>{{ posts }}</h3>
+                <p>Posts</p>
+            </div>
+
+            <div>
+                <h3>{{ followers }}</h3>
+                <p>Followers</p>
+            </div>
+
+            <div>
+                <h3>{{ following }}</h3>
+                <p>Following</p>
+            </div>
+
+        </div>
+
+        <!-- If viewing other profile -->
+        {% if request.user.username != user_profile.username %}
+
+        <a href="/follow/{{ user_profile.username }}/">
+            <button onclick="followMessage()">
+                Follow 💜
+            </button>
+        </a>
+
+        {% else %}
+
+        <button>
+            Edit Profile ✏️
+        </button>
+
+        {% endif %}
+
+    </div>
+
+</div>
+
+<!-- optional JS -->
+<script src="{% static 'script.js' %}"></script>
+
+</body>
+</html>

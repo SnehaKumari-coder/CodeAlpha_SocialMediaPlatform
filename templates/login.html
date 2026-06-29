@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - VibeConnect</title>
+
+    <!-- Django static -->
+     {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+
+<div class="auth-container">
+
+    <div class="auth-box">
+
+        <h1>✨ VibeConnect</h1>
+        <p>Welcome Back 💜</p>
+
+        <!-- Django login route -->
+        <form action="/login_user/" method="POST"
+              onsubmit="return validateLogin()">
+
+            {% csrf_token %}
+
+            <input
+                id="username"
+                type="text"
+                name="username"
+                placeholder="Enter Username"
+                required>
+
+            <input
+                id="password"
+                type="password"
+                name="password"
+                placeholder="Enter Password"
+                required>
+
+            <button type="submit">
+                Login 🚀
+            </button>
+
+        </form>
+
+        <div class="bottom-text">
+            New here?
+            <a href="/register/">Create Account</a>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Django static JS -->
+<script src="{% static 'script.js' %}"></script>
+
+</body>
+</html>

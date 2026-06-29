@@ -1,0 +1,326 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* BODY */
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(
+        135deg,
+        #ff9a9e,
+        #fad0c4,
+        #fbc2eb,
+        #a18cd1
+    );
+    min-height:100vh;
+}
+
+
+/* HEADER */
+header{
+    background: linear-gradient(
+        90deg,
+        #6a11cb,
+        #2575fc
+    );
+
+    padding:20px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    box-shadow:0 4px 12px rgba(0,0,0,0.2);
+}
+
+header h1{
+    color:white;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:yellow;
+}
+
+
+/* AUTH PAGES */
+.auth-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.auth-box{
+    width:420px;
+    background: rgba(255,255,255,0.95);
+
+    padding:40px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    box-shadow:0 8px 25px rgba(0,0,0,0.2);
+}
+
+.auth-box h1{
+    color:#7c3aed;
+    margin-bottom:10px;
+}
+
+.auth-box p{
+    margin-bottom:20px;
+    color:#555;
+}
+
+.auth-box input{
+    width:100%;
+    padding:14px;
+    margin:12px 0;
+
+    border:none;
+    outline:none;
+
+    border-radius:12px;
+
+    background:#f3f4f6;
+    font-size:15px;
+}
+
+.bottom-text{
+    margin-top:20px;
+}
+
+.bottom-text a{
+    text-decoration:none;
+    color:#6a11cb;
+    font-weight:bold;
+}
+
+
+/* MAIN CONTAINER */
+.main-container{
+    width:75%;
+    margin:40px auto;
+}
+
+
+/* POST CREATE BOX */
+.post-section{
+    background:rgba(255,255,255,0.9);
+
+    padding:25px;
+
+    border-radius:20px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+
+    margin-bottom:30px;
+}
+
+.post-section h2{
+    margin-bottom:15px;
+    color:#6a11cb;
+}
+
+
+/* TEXTAREA */
+textarea{
+    width:100%;
+    height:120px;
+
+    border:none;
+    outline:none;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    background:#f3f4f6;
+
+    resize:none;
+}
+
+
+/* BUTTON */
+button{
+    margin-top:15px;
+
+    border:none;
+
+    padding:12px 20px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    background: linear-gradient(
+        90deg,
+        #ff512f,
+        #dd2476
+    );
+
+    color:white;
+
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+
+/* FEED */
+.feed-section h2{
+    margin-bottom:20px;
+}
+
+.post-card{
+    background:rgba(255,255,255,0.95);
+
+    padding:20px;
+
+    border-radius:20px;
+
+    margin-bottom:20px;
+
+    box-shadow:0 6px 18px rgba(0,0,0,0.12);
+}
+
+.user-name{
+    font-weight:bold;
+    color:#7c3aed;
+    font-size:18px;
+}
+
+.post-content{
+    margin:15px 0;
+    font-size:17px;
+}
+
+.actions{
+    display:flex;
+    gap:12px;
+}
+
+
+/* COMMENT SECTION */
+.comment-section{
+    margin-top:20px;
+}
+
+.comment-section form{
+    display:flex;
+    gap:10px;
+}
+
+.comment-section input{
+    flex:1;
+
+    padding:12px;
+
+    border:none;
+    outline:none;
+
+    border-radius:10px;
+
+    background:#f3f4f6;
+}
+
+.all-comments{
+    margin-top:15px;
+}
+
+.all-comments p{
+    background:#f8f8f8;
+
+    padding:10px;
+
+    border-radius:8px;
+
+    margin-top:8px;
+}
+
+
+/* PROFILE PAGE */
+.profile-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:80vh;
+}
+
+.profile-card{
+    width:450px;
+
+    background:rgba(255,255,255,0.95);
+
+    padding:35px;
+
+    text-align:center;
+
+    border-radius:25px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+.avatar{
+    width:100px;
+    height:100px;
+
+    background: linear-gradient(
+        135deg,
+        #ff512f,
+        #dd2476
+    );
+
+    border-radius:50%;
+
+    margin:auto;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:45px;
+
+    margin-bottom:20px;
+}
+
+.profile-card h2{
+    color:#6d28d9;
+    margin-bottom:10px;
+}
+
+.bio{
+    color:#666;
+    margin-bottom:25px;
+}
+
+.stats{
+    display:flex;
+    justify-content:space-around;
+    margin:25px 0;
+}
+
+.stats h3{
+    color:#7c3aed;
+    font-size:24px;
+}
+
+.follow-btn,
+.edit-btn{
+    width:100%;
+}
